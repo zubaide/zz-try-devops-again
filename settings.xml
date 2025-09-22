@@ -1,0 +1,35 @@
+<setting>
+<servers>
+  <server>
+    <id>zubaide-zz-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>zubaide-zz-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>zubaide-zz-devops-cicd</id>
+        <url>https://zubaide-010438508372.d.codeartifact.ap-southeast-1.amazonaws.com/maven/zz-devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>zubaide-zz-devops-cicd</id>
+    <name>zubaide-zz-devops-cicd</name>
+    <url>https://zubaide-010438508372.d.codeartifact.ap-southeast-1.amazonaws.com/maven/zz-devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</setting>
+
